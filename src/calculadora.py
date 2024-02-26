@@ -21,6 +21,9 @@ def calcular(numero1, numero2, operacion):
         case '%':
             #Operación modulo 
             respuesta= numero1%numero2
+        case 'Raiz':
+            #Operación Raiz
+            respuesta= numero1**(1/numero2)    
         case _:
             raise ValueError("Operación inválida.")
          
@@ -32,7 +35,7 @@ if __name__ == '__main__':
     numero1 = int(input())
     print("Ingrese el número 2")
     numero2 = int(input())
-    print("Ingrese la operación (+, -, *, /, ^, %)")
+    print("Ingrese la operación (+, -, *, /, ^, %, Raiz")
     operacion = input()
 
     resultado = calcular(numero1, numero2, operacion)
